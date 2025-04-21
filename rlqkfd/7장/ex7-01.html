@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체 생성 및 활용</title>
+</head>
+<body>
+<h3>객체 생성 및 활용</h3>
+<hr>
+
+<div id="time"></div>
+<div id="str"></div>
+
+<script>
+	// String 객체 생성
+	let mystr= new String("자바스크립트 공부하기");
+	// document.write("mystr의 내용 : " + mystr + "<br>");
+	// document.write("mystr의 길이 : " + mystr.length + "<br>");
+	// // mystr.length=10; // 이 문장은 오류이다.
+
+	document.getElementById("str").innerHTML = "mystr의 내용 : " +
+	mystr + "<br>" + "mystr의 길이 : " + mystr.length + "<br>";
+
+	
+	function updateTime() {
+		// Date 객체 생성
+		let today = new Date();
+		document.getElementById("time").innerHTML = "현재 시간 : " +
+		 today.toLocaleString() + "<br>";
+	}
+
+	updateTime();
+	setInterval(updateTime, 1000); // 1초마다 updateTime 함수 호출
+</script>
+</body>
+</html>
